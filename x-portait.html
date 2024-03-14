@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"Ω
+        content="X-Portrait: Expressive Portrait Animation with Hierarchical Motion Attention">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>X-Portrait: Expressive Portrait Animation with Hierarchical Motion Attention</title>
+  <!-- Global site tag (gtag.js) - Google AnalyticsΩ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">X-Portrait: Expressive Portrait Animation with Hierarchical Motion Attention</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              SUBMISSION ID: 680</span>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+            <img src="./static/images/teaser.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+
+      <h2 class="content has-text-justified">
+        Given a single reference portrait (left column), X-Portrait demonstrates remarkable proficiency in synthesizing compelling and expressive animations (right columns), capturing a wide range of head poses and facial expressions of a driving sequence at both dynamic and nuanced scales. Our method is universally effective across a diverse range of facial portraits and driving motions, ensuring precise retention of identity features and faithful transfer of intricate motion details.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+We propose X-Portrait, an innovative conditional diffusion model tailored for generating expressive and temporally coherent portrait animation. Specifically, given a single portrait as appearance reference, we aim to animate it with motion derived from a driving video, capturing both highly dynamic and subtle facial expressions along with wide-range head movements.  As its core, we leverage the generative prior of a pre-trained diffusion model as the rendering backbone, while achieve fine-grained head pose and expression control with novel controlling signals within the framework of ControlNet.  In contrast to conventional coarse explicit controls such as facial landmarks, our motion control module is learned to interpret the dynamics directly from the original driving RGB inputs. The motion accuracy is further enhanced with a patch-based local control module that effectively guides the motion attention to small-scale nuances like eyeball positions. Notably, to mitigate the identity leakage from the driving signals,  we train our motion control modules with scale-augmented cross-identity images, ensuring full disentanglement from the appearance reference modules.
+Experimental results demonstrate the universal effectiveness of X-Portrait across a diverse range of facial portraits and expressive driving sequences, and
+showcase its proficiency in generating captivating portrait animations with well retained identity characteristics.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">More Results</h2>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Single portrait for various motions</h3>
+        <div class="content has-text-justified">
+        </div>
+        <div class="content has-text-centered">
+                    <img src="./static/images/refer.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/style2DCartoon3-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/style3DCartoon5-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/stylemid0-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/styleWood1-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/styleStatus2-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/realoldman3-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/styleElf3-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/realoldman2-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/styleRobot-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/styleColor-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/realgirl2-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/realbaby2-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/realjoker1-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/styleAnime1-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/subject_Xvideo/realwoman10-crop_new.mp4' type='video/mp4'>
+           </video>
+
+        </div>
+        <!--/ Re-rendering. -->
+        <h3 class="title is-4">Single motion for various portraits</h3>
+        <div class="content has-text-justified">
+        </div>
+        <div class="content has-text-centered">
+
+        <img src="./static/images/guide.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/pexels_largeheadpose_black-crop_new.mp4' type='video/mp4'>
+           </video>
+
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/pexels_scream_upcam-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/pexels_laugh_indian-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/asian_disgusted_asian2-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/pexels_angry_white-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/pexels_happydance_black1-crop_new.mp4' type='video/mp4'>
+           </video>
+
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/pexels_confused_indian-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/pexels_wristle_black-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/pexels_angry_green-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/060-07-W-b-M-indoor-light_5.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/pexels_confused_black-crop_new.mp4' type='video/mp4'>
+           </video>
+
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/060-05-W-b-M-indoor-light_2.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/pexels_happy_blackgirl-crop_new.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/pexels_annoyed_girl2-crop_new.mp4' type='video/mp4'>
+           </video>
+
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/437-17-O-M-outdoor_7.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/199-15-B-b-M-window-light_8.mp4' type='video/mp4'>
+           </video>
+           <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+           <source src='./static/videos/video_Xsubject/060-05-W-b-M-indoor-light_6.mp4' type='video/mp4'>
+           </video>
+
+
+
+        </div>
+
+
+              <!--/ Re-rendering. -->
+        <h3 class="title is-4">Comparison</h3>
+        <div class="content has-text-justified">
+        </div>
+        <div class="content has-text-centered">
+
+        <img src="./static/images/compare.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+               <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+               <source src='./static/videos/compare/style3DCartoon3-crop_new_pexels_confused_black-crop_new.mp4' type='video/mp4'>
+               </video>
+               <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+               <source src='./static/videos/compare/stylemid3-crop_new_437-20-O-M-outdoor_7.mp4' type='video/mp4'>
+               </video>
+               <video id='replay-video' autoplay controls muted loop playsinline width='100%'>
+               <source src='./static/videos/compare/pexels-vika-glitter-1650406-crop_new_060-06-W-b-M-indoor-light_2.mp4' type='video/mp4'>
+               </video>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!--/ Animation. -->
+
+
+
+  </div>
+</section>
+
+
+</body>
+</html>
